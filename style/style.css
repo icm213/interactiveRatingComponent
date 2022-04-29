@@ -1,0 +1,168 @@
+@font-face {
+  font-family: Overpass;
+  src: url(https://fonts.google.com/specimen/Overpass);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-family: Overpass, sans-serif;
+}
+
+main {
+  background-color: #121417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.component, .rating__result {
+  max-width: 20rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #252d37;
+  border-radius: 1rem;
+  padding: 2rem;
+  gap: 1rem;
+  position: absolute;
+  z-index: 10;
+}
+
+.component .component__star__image, .rating__result .component__star__image, .component .component__rating__buttons__background .component__rating__button, .rating__result .component__rating__buttons__background .component__rating__button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(124, 135, 152, 0.4);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.component .component__star__image img, .rating__result .component__star__image img, .component .component__rating__buttons__background .component__rating__button img, .rating__result .component__rating__buttons__background .component__rating__button img {
+  width: 1rem;
+  height: auto;
+}
+
+.component h1, .rating__result h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.component .component__text, .rating__result .component__text {
+  font-size: 1rem;
+  color: #959eac;
+}
+
+.component .component__rating__buttons__background, .rating__result .component__rating__buttons__background {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.component .component__rating__buttons__background .component__rating__button, .rating__result .component__rating__buttons__background .component__rating__button {
+  border: none;
+  padding: 1.3rem;
+  color: #959eac;
+}
+
+.component .component__rating__buttons__background .component__rating__button:hover, .rating__result .component__rating__buttons__background .component__rating__button:hover {
+  background-color: #fb7413;
+  color: white;
+}
+
+.component .component__rating__buttons__background .component__rating__button:focus, .rating__result .component__rating__buttons__background .component__rating__button:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+
+.component .component__submit__button, .rating__result .component__submit__button {
+  width: 100%;
+  height: auto;
+  background-color: #fb7413;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.5rem;
+}
+
+.component .component__submit__button:hover, .rating__result .component__submit__button:hover {
+  text-decoration: underline;
+}
+
+.component .component__submit__button:active, .rating__result .component__submit__button:active {
+  background-color: white;
+  color: #fb7413;
+}
+
+.rating__result {
+  opacity: 0;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+}
+
+.rating__result .rating__result__image {
+  width: 10rem;
+  height: auto;
+}
+
+.rating__result .rating__result__announcement {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  color: #fb7413;
+  background-color: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+}
+
+.rating__result .rating__result__announcement output {
+  width: auto;
+}
+
+.rating__result h1 {
+  color: white;
+}
+
+.rating__result p {
+  color: #959eac;
+}
+
+.animationToUp {
+  animation: animationUp 0.6s ease-in-out 1 forwards;
+}
+
+@keyframes animationUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+.animationToDown {
+  animation: animationDown;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animationDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
