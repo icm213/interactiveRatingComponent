@@ -24,7 +24,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: 1rem;
 }
 .component {
     max-width: 20rem;
@@ -153,5 +153,28 @@ main {
         100%{
             opacity: 1;
         }
+    }
+}
+footer {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: $veryDarkBlue;
+    bottom: 0px;
+    font-size: 10px;
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    a {
+        color: $orange;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    main {
+        margin: auto;
     }
 }
