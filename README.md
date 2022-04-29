@@ -1,5 +1,9 @@
 # Frontend Mentor - Interactive rating component
 
+LIVE DEMO:
+
+ https://icm213.github.io/interactiveRatingComponent/
+
 ![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
